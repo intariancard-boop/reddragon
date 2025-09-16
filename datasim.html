@@ -1,0 +1,289 @@
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title></title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+<style type="text/css">.estonia-sim-card-wrapper {
+            font-family: Tahoma, Arial, sans-serif;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        
+        .estonia-sim-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .estonia-sim-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .card-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .card-title {
+            font-size: 28px;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+        
+        .card-subtitle {
+            font-size: 20px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .card-price {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        .card-section {
+            margin-bottom: 30px;
+        }
+        
+        .card-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 80px;
+            height: 2px;
+            background: #3498db;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .features-list li {
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li i {
+            color: #3498db;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+        
+        .highlight-text {
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 30px 0 20px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            transform: translateY(-3px);
+        }
+        
+        .warning-text {
+            text-align: center;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        
+        .conditions-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .conditions-list li {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .conditions-list li i {
+            margin-left: 10px;
+            color: #27ae60;
+        }
+        
+        .url-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 18px;
+            word-break: break-all;
+        }
+        
+        @media (max-width: 768px) {
+            .card-title {
+                font-size: 24px;
+            }
+            
+            .card-subtitle {
+                font-size: 18px;
+            }
+            
+            .card-price {
+                font-size: 20px;
+            }
+            
+            .card-header, .card-body {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 22px;
+            }
+            
+            .card-subtitle {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            .cta-button {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+</style>
+<div class="estonia-sim-card-wrapper">
+<div class="estonia-sim-card">
+<div class="card-header"><span class="card-badge">پیشنهاد ویژه</span>
+<h1 class="card-title">سیمکارت DATA استونی</h1>
+
+<p class="card-subtitle">بهترین همراه برای مسافران بین المللی</p>
+
+<div class="card-price">قیمت فقط 40 دلار</div>
+</div>
+
+<div class="card-body">
+<div class="card-section">
+<p class="warning-text">موجودی محدود - فوری خریداری کنید</p>
+
+<p>سیمکارت DATA استونی با طراحی ویژه برای مسافران حرفه&zwnj;ای، گزینه&zwnj;ای استثنایی برای سفرهای خارجی است. این سیمکارت با بسته&zwnj;های اینترنتی فوق&zwnj;العاده و پوشش گسترده، بهترین انتخاب برای کسانی است که زیاد سفر می&zwnj;کنند.</p>
+
+<p>فقط کافیه تعرفه های اینترنت این سیمکارت را ببینید و بقیه سیمکارت های خارجی را دور بیاندازید و با خیال راحت سفر کنید</p>
+</div>
+
+<div class="card-section">
+<h3 class="section-title">ویژگی&zwnj;های منحصر به فرد</h3>
+
+<ul class="features-list">
+	<li>بسته&zwnj;های اینترنت ویژه با قیمت استثنایی برای ترکیه، اروپا، آمریکا و آسیا</li>
+	<li>پوشش گسترده در 180 کشور جهان (به جز ایران، روسیه، سوریه، لبنان، لیبی، بلاروس)</li>
+	<li>امکان تماس ورودی و خروجی در تمام کشورهای تحت پوشش</li>
+	<li>پیش&zwnj;شماره استونی (00372) با امکان خرید 20 شماره اضافی از کشورهای مختلف</li>
+	<li>تعداد سیمکارت&zwnj;ها بسیار محدود است - مخصوص مسافران پر سفر</li>
+</ul>
+</div>
+
+<div class="card-section">
+<h3 class="section-title">چرا این سیمکارت را انتخاب کنیم؟</h3>
+
+<p>شما می&zwnj;توانید سیمکارت را بدون شارژ اولیه خریداری کنید و دقیقاً قبل از سفر، به میزان نیاز خود شارژ نمایید. این ویژگی باعث می&zwnj;شود هزینه&zwnj;های شما بهینه شود. با فعال&zwnj;سازی بسته&zwnj;های اینترنتی می&zwnj;توانید از تمام شبکه&zwnj;های اجتماعی و اپلیکیشن&zwnj;های مورد نیاز خود بدون محدودیت استفاده کنید.</p>
+</div>
+
+<div class="card-section">
+<h3 class="section-title">امکانات پنل کاربری پیشرفته</h3>
+
+<ul class="features-list">
+	<li>امکان شارژ پنل کاربری با (ریال، تتر، پی پال)</li>
+	<li>شارژ آنی و فوری سیمکارت</li>
+	<li>ده&zwnj;ها بسته اینترنتی متنوع با قیمت&zwnj;های ویژه</li>
+	<li>مشاهده دقیق مصرف و صورت حساب</li>
+	<li>مدیریت 20 شماره مختلف روی یک سیمکارت</li>
+	<li>امکان فعال سازی دریافت پیامک در پنل کاربری (سالی 18 دلار)</li>
+</ul>
+</div>
+
+<div class="card-section">
+<h3 class="section-title">شرایط ویژه</h3>
+
+<ul class="conditions-list">
+	<li>بدون هزینه نگهداری ماهیانه</li>
+	<li>فعال ماندن با حداقل یک شارژ یا تماس هر 12 ماه</li>
+	<li>تخفیف ویژه برای آژانس&zwnj;های مسافرتی (فروش عمده)</li>
+	<li>موجودی محدود - فرصت را از دست ندهید!</li>
+</ul>
+
+<p>این سیمکارت به صورت دائمی فروش می&zwnj;رود و برای مسافران حرفه&zwnj;ای طراحی شده است</p>
+</div>
+
+<h3 class="url-box"><strong>برای مشاهده بسته های اینترنتی سیمکارت به آدرس زیر بروید:</strong><br />
+<a href="https://arianltd.com/datarate" target="_blank"><span class="highlight-text">https://knightsim.com/directcall-data/</span></a></h3>
+<a class="cta-button" href="https://t.me/shaolindragon">خرید سیمکارت DATA استونی </a></div>
+</div>
+</div>
