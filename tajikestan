@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ویزاکارت تاجیکستان - خدمات بانکی بین‌المللی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2e86c1;
+            --accent-color: #2874a6;
+            --gold-color: #d4ac0d;
+            --platinum-color: #7f8c8d;
+            --light-color: #f8f9fa;
+            --dark-color: #2c3e50;
+            --text-color: #3D155F;
+            --success-color: #27ae60;
+            --warning-color: #e74c3c;
+            --menu-bg: #ffffff;
+            --menu-text: #3D155F;
+            --menu-hover: #f5f5f5;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: var(--menu-bg);
+            color: var(--menu-text);
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+        }
+        
+        /* Navigation Menu */
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin: 0 10px;
+        }
+        
+        .nav-menu a {
+            color: var(--menu-text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            background-color: var(--menu-hover);
+            color: var(--primary-color);
+        }
+        
+        /* Search Box */
+        .search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-input {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            width: 200px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .search-input:focus {
+            width: 250px;
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        /* Search Results */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1001;
+        }
+        
+        .search-results.active {
+            display: block;
+        }
+        
+        .search-result-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        
+        .search-result-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1569154941061-e231b4725ef1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gold-color);
+            color: var(--dark-color);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #f1c40f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold-color);
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: var(--gold-color);
+            color: var(--dark-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 15px auto;
+        }
+        
+        /* Cards */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-header {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .card-gold .card-header {
+            background: linear-gradient(135deg, #d4ac0d, #f1c40f);
+        }
+        
+        .card-platinum .card-header {
+            background: linear-gradient(135deg, #7f8c8d, #bdc3c7);
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-body ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .card-body ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .card-body ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .card-body ul li i {
+            color: var(--success-color);
+            margin-left: 10px;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e9f7fe;
+        }
+        
+        .advantage {
+            color: var(--success-color);
+            font-weight: bold;
+        }
+        
+        .disadvantage {
+            color: var(--warning-color);
+        }
+        
+        /* Features */
+        .features {
+            background-color: var(--light-color);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+        
+        .content-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        /* Summary Section */
+        .summary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .summary h2 {
+            margin-bottom: 20px;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 15px 20px;
+            background: var(--secondary-color);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-active .faq-answer {
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            color: var(--text-color);
+        }
+        
+        .contact-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .contact-link:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .contact-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .about-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .provider-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin: 10px 0;
+        }
+        
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--light-color);
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            z-index: 1000;
+            cursor: pointer;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        }
+        
+        .admin-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            z-index: 1002;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .admin-form h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1001;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 99;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--menu-bg);
+                width: 80%;
+                height: calc(100vh - 80px);
+                box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                padding: 20px;
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 10px 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .search-container {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+            }
+            
+            .search-input {
+                width: 100%;
+            }
+            
+            .search-input:focus {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-item {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .contact-link {
+                font-size: 1rem;
+            }
+            
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .nav-container {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            .nav-container.active {
+                display: block;
+            }
+            
+            .admin-panel {
+                top: auto;
+                bottom: 70px;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .contact-item {
+                padding: 15px;
+            }
+            
+            .contact-item i {
+                font-size: 2rem;
+            }
+            
+            .search-input {
+                font-size: 16px; /* Prevent zoom on iOS */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Panel Trigger -->
+    <div class="admin-panel">
+        <i class="fas fa-cog"></i> مدیریت
+    </div>
+
+    <!-- Admin Form Overlay -->
+    <div class="overlay" id="admin-overlay"></div>
+
+    <!-- Admin Form -->
+    <div class="admin-form" id="admin-form">
+        <h3>ویرایش اطلاعات سایت</h3>
+        <div class="form-group">
+            <label for="company-name">نام شرکت:</label>
+            <input type="text" id="company-name" value="شرکت تجارت الکترونیک آرین">
+        </div>
+        <div class="form-group">
+            <label for="telegram-link">لینک تلگرام:</label>
+            <input type="text" id="telegram-link" value="https://t.me/arianltd">
+        </div>
+        <div class="form-group">
+            <label for="telegram-display">نمایش تلگرام:</label>
+            <input type="text" id="telegram-display" value="@arianltd">
+        </div>
+        <div class="form-group">
+            <label for="whatsapp-number">شماره واتساپ:</label>
+            <input type="text" id="whatsapp-number" value="09122270234">
+        </div>
+        <div class="form-group">
+            <label for="email-address">آدرس ایمیل:</label>
+            <input type="text" id="email-address" value="info@arianltd.com">
+        </div>
+        <div class="form-group">
+            <label for="phone-number">شماره تلفن:</label>
+            <input type="text" id="phone-number" value="021-22535250">
+        </div>
+        <div class="form-buttons">
+            <button class="btn" id="save-settings">ذخیره تغییرات</button>
+            <button class="btn btn-outline" id="close-admin">بستن</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-credit-card"></i>
+                ویزاکارت تاجیکستان
+            </div>
+            
+            <button class="menu-toggle" aria-label="منو">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="#home">صفحه اصلی</a></li>
+                    <li><a href="#benefits">مزایا</a></li>
+                    <li><a href="#products">محصولات</a></li>
+                    <li><a href="#features">ویژگی‌ها</a></li>
+                    <li><a href="#details">جزئیات</a></li>
+                    <li><a href="#comparison">مقایسه</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#faq">سوالات</a></li>
+                    <li><a href="#contact">تماس</a></li>
+                </ul>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="جستجو...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>ویزاکارت بین‌المللی تاجیکستان</h1>
+            <p>راهکاری امن و مطمئن برای تراکنش‌های مالی بین‌المللی، دریافت پرداخت‌های خارجی و жизни بدون دغدغه در سراسر جهان</p>
+            <a href="https://t.me/arianltd" class="btn" id="telegram-btn">دریافت مشاوره رایگان</a>
+            <a href="#contact" class="btn btn-outline">تماس با ما</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title">ویزاکارت برای چه کسانی مناسب است؟</h2>
+            
+            <div class="content-section">
+                <p>زمانی که سال 1386 داشتیم در مورد ویزاکارت توضیح می‌دادیم هنوز خیلی‌ها در Iran هم از پول نقد استفاده می‌کردند، اما در حال حاضر در Iran هم 90 درصد مردم در Iran هم از پول نقد استفاده نمی‌کنند چه برسه به خارج از کشور. فکر می‌کنیم در سال 1404 نیازی نیست توضیح دهیم چرا ویزاکارت ضروری است.</p>
+                
+                <p>کسانی که به خارج از کشور سفر کرده‌اند به خوبی می‌دانند که نداشتن ویزاکارت/مسترکارت چه حس بدی دارد و چگونه زندگی را محدود می‌کند.</p>
+                
+                <h3>دسته‌های اصلی متقاضیان ویزاکارت:</h3>
+                <ul>
+                    <li>فریلنسرها, تاجرها و یوتیوبرها</li>
+                    <li>کسانی که می‌خواهند حساب بانکی و ویزاکارتی داشته باشند که بتوانند حسابشان را برای دریافت درآمد و پرداخت‌ها ارائه دهند</li>
+                    <li>افرادی که نیاز به پرداخت اشتراک پلتفرم‌های بین‌المللی دارند</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">محصولات ما</h2>
+            <div class="card-container">
+                <!-- Gold Card -->
+                <div class="card card-gold">
+                    <div class="card-header">
+                        <h3>ویزاکارت گلد</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> اعتبار جهانی و بدون هزینه‌های پنهان</li>
+                            <li><i class="fas fa-check-circle"></i> خرید و پرداخت امن در سراسر دنیا</li>
+                            <li><i class="fas fa-check-circle"></i> امکان خرید رمزارز تا سقف 3,000 دلار روزانه</li>
+                            <li><i class="fas fa-check-circle"></i> برداشت از ATM بانک‌های تاجیکستان با کارمزد 1%</li>
+                            <li><i class="fas fa-check-circle"></i> برداشت از ATM بانک‌های خارجی با کارمزد 2%</li>
+                            <li><i class="fas fa-check-circle"></i> پرداخت برای خرید و خدمات با کارمزد 0%</li>
+                            <li><i class="fas fa-check-circle"></i> پذیرش جهانی برای خریدهای آنلاین و وب‌سایت‌های فریلنسری</li>
+                        </ul>
+                        <div class="price">
+                            قیمت: 480 تا 520 دلار
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Platinum Card -->
+                <div class="card card-platinum">
+                    <div class="card-header">
+                        <h3>ویزاکارت پلاتینیوم</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> تمام مزایای کارت گلد به همراه امتیازات ویژه</li>
+                            <li><i class="fas fa-check-circle"></i> کش‌بک‌های جذاب بین‌المللی (مثل Booking)</li>
+                            <li><i class="fas fa-check-circle"></i> برداشت رایگان از ATM بانک صادرکننده</li>
+                            <li><i class="fas fa-check-circle"></i> برداشت از سایر بانک‌های تاجیکستان با کارمزد 1%</li>
+                            <li><i class="fas fa-check-circle"></i> برداشت از بانک‌های خارجی با کارمزد 2%</li>
+                            <li><i class="fas fa-check-circle"></i> پرداخت خرید و خدمات با کارمزد 0%</li>
+                            <li><i class="fas fa-check-circle"></i> سقف برداشت روزانه 5,000 دلار</li>
+                            <li><i class="fas fa-check-circle"></i> دسترسی به خدمات CIP فرودگاهی (1-2 بار در سال)</li>
+                            <li><i class="fas fa-check-circle"></i> جایگاه ممتاز در معاملات بین‌المللی</li>
+                        </ul>
+                        <div class="price">
+                            قیمت: 590 تا 650 دلار
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">ویژگی‌های ویزاکارت تاجیکستان</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>اعتبار جهانی</h3>
+                    <p>قابلیت استفاده در سراسر جهان (به جز عراق و چند کشور تحریمی)</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>امنیت بالا</h3>
+                    <p>حساب بانکی با پاسپورت ایرانی و هماهنگی کامل با بانک صادرکننده</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-coins"></i>
+                    <h3>پشتیبانی از رمزارز</h3>
+                    <p>امکان خرید ارز دیجیتال با ویزاکارت از صرافی های ارز دیجیتال</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>پرداخت‌های بین‌المللی</h3>
+                    <p>قابلیت پرداخت در وب‌سایت‌های که به ویزاکارت خدمات میدهند</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>کارمزد پایین</h3>
+                    <p>کارمزدهای بانکی بسیار پایین‌تر نسبت به بانک‌های ترکیه</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>پشتیبانی فارسی</h3>
+                    <p>پشتیبانی نزدیک به زبان فارسی و خدمات رو به توسعه</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="details">
+        <div class="container">
+            <h2 class="section-title">جزئیات مهم ویزاکارت تاجیکستان</h2>
+            
+            <div class="content-section">
+                <h3>مزایای اصلی ویزاکارت تاجیکستان</h3>
+                <ul>
+                    <li>ویزاکارت و حساب بانکی با پاسپورت ایرانی باز می‌شود</li>
+                    <li>حساب بانکی شما زیر مجموعه حساب شرکت دیگری نیست</li>
+                    <li>با مدارک معتبر صادر می‌شود و کاملا قانونی است</li>
+                    <li>بانک مرتباً در حال بهبود و توسعه خدمات خود است</li>
+                    <li>قیمت بسیار مناسب با توجه به ارزش خدمات ارائه شده</li>
+                </ul>
+                
+                <h3>نکات فنی مهم</h3>
+                <ul>
+                    <li>ماهیت ویزاکارت‌ها کردیت کارت است و در سراسر جهان قابل استفاده است</li>
+                    <li>در همه کشورهای ارائه دهنده ویزاکارت به جز عراق قابل استفاده است</li>
+                    <li>امکان استفاده با آیپی ایرانی وجود دارد اما برای امنیت بیشتر توصیه نمی‌شود</li>
+                </ul>
+                
+                <h3>روش‌های شارژ حساب</h3>
+                <p>می‌توانید از طریق صرافی‌ها و شرکت‌های خارجی حساب خود را شارژ کنید. همچنین به زودی امکان شارژ از طریق ارزهای دیجیتal نیز فراهم خواهد شد.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <h2 class="section-title">مقایسه ویزاکارت تاجیکستان و ترکیه</h2>
+            
+            <div class="content-section">
+                <p>مقایسه شرایط افتتاح حساب در بانک توسعه تاجیکستان (DBT) و بانک‌های ترکیه (زراعت و واکیف)</p>
+            </div>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>ویژگی</th>
+                    <th>بانک توسعه تاجیکستان (DBT)</th>
+                    <th>بانک‌های ترکیه (زراعت و واکیف)</th>
+                </tr>
+                <tr>
+                    <td>میزان دپوزیت</td>
+                    <td class="advantage">بدون نیاز به دپوزیت (صفر)</td>
+                    <td class="disadvantage">برای کردیت کارت بین 55,000 تا 110,000 لیر (حدود 800 تا 1600 دلار)<br>برای دبیت کارت 22,000 لیر</td>
+                </tr>
+                <tr>
+                    <td>مدت زمان انجام</td>
+                    <td class="advantage">پس از تکمیل مدارک، تحویل در ایران طی 2 تا 7 روز کاری<br>تعهد ما نهایتاً 2 هفته</td>
+                    <td class="disadvantage">حدود 40 روز برای آماده‌سازی مدارک + 2 هفته برای اجرا و ارسال</td>
+                </tr>
+                <tr>
+                    <td>قابلیت استفاده</td>
+                    <td class="advantage">ویزا کارت پلاتینیوم تاجیکستان: بدون محدودیت</td>
+                    <td class="disadvantage">دارای محدودیت در برخی زمینه‌ها مانند خرید و فروش رمزارز یا پرداخت‌های مرتبط با بازی‌های ورزشی و پی پال و خیلی از سایت ها و خودپرداز های خارجی</td>
+                </tr>
+                <tr>
+                    <td>مسدودی حساب</td>
+                    <td class="advantage">تاکنون چنین مشکلی گزارش نشده است</td>
+                    <td class="disadvantage">گزارش‌های متعدد از مسدودی حساب‌ها به دلیل تراکنش‌های بالا</td>
+                </tr>
+                <tr>
+                    <td>پایه ارز</td>
+                    <td class="advantage">دلار</td>
+                    <td class="disadvantage">لیر</td>
+                </tr>
+                <tr>
+                    <td>هزینه خدمات جانبی (مثل تغییر شماره)</td>
+                    <td class="advantage">حدود 40 دلار (تقریباً یک‌پ پنجم هزینه ترکیه)</td>
+                    <td class="disadvantage">به‌طور میانگین 200 دلار</td>
+                </tr>
+                <tr>
+                    <td>دریافت پیامک برای خرید یا انتقال وجه</td>
+                    <td class="advantage">رایگان، پیامک‌ها داخل اپلیکیشن بانک نمایش داده می‌شوند</td>
+                    <td class="disadvantage">ارسال کد OTP فقط روی سیم‌کارت ترکیه‌ای<br>هزینه سیم‌کارت برای غیرمقیم‌ها سالانه 300 دلار (به‌جز شارژ)</td>
+                </tr>
+                <tr>
+                    <td>امکانات ویژه</td>
+                    <td class="advantage">پشتیبانی از کارت‌به‌کارت، واریز و برداشت با رمزارز، ارسال دستی پول به سراسر جهان، و امکان واریز و برداشت با سایر ارزها</td>
+                    <td class="disadvantage">تاکنون برنامه توسعه مشابهی ارائه نداده‌اند</td>
+                </tr>
+            </table>
+            
+            <div class="content-section">
+                <p>با توجه به مقایسه انجام شده، ویزاکارت تاجیکستان (بانک توسعه تاجیکستان) در اکثر زمینه‌ها نسبت به بانک‌های ترکیه برتری دارد، از جمله عدم نیاز به دپوزیت، زمان تحویل کوتاه‌تر، عدم محدودیت در استفاده، پایه ارز دلاری، هزینه‌های پایین‌تر و امکانات ویژه بیشتر.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">درباره ما</h2>
+            
+            <div class="about-section">
+                <h3>ارائه شده توسط:</h3>
+                <div class="provider-name" id="company-name-display">شرکت تجارت الکترونیک آرین</div>
+                <p>ما با سال‌ها تجربه در زمینه خدمات بانکی بین‌المللی، ارائه راهکارهای مالی به هموطنان عزیز و تسهیل دسترسی به سیستم بانکی جهانی را هدف خود قرار داده‌ایم.</p>
+                <p>تیم متخصص мы با دانش عمیق از بازارهای مالی بین‌المللی و سیستم‌های بانکی، آماده ارائه بهترین خدمات به شماست.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary">
+        <div class="container">
+            <h2>خلاصه مزایای ویزاکارت تاجیکستان</h2>
+            <p>ویزاکارت تاجیکستان راهکاری امن، مطمئن و مقرون‌به‌صرفه برای ایرانیانی است که قصد دارند بدون دغدغه‌های مالی و با امکان دسترسی به سیستم بانکی بین‌المللی، به تجارت، سفر یا زندگی در خارج از کشور بپردازند.</p>
+            <a href="https://t.me/arianltd" class="btn" id="telegram-btn2">دریافت مشاوره رایگان</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">سوالات متداول</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ویزاکارت تاجیکستان برای چه کسانی مناسب است؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>این سرویس برای افرادی که قصد سفر به خارج از کشور دارند، فریلنسرها، تاجران، و کسانی که نیاز به حساب بانکی بین‌المللی دارند، مناسب است.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>می توانیم از دستگاه‌های ATM و POS استفاده کنیم؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>بله به راحتی می توانید از ATM خودپرداز و دستگاه POS کارتخوان استفاده کنید. مشکلی در استفاده نیست، فقط در کشور عراق نباید از خودپرداز استفاده کنید و همچنین کشورهای تحریمی از سمت ویزاکارت.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>تفاوت کارت گلد و پلاتینیوم چیست؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>قابلیت استفاده از تخفیف و کش بک های قویتر و ویزاکارت پلاتینوم خدمات CIP فرودگاهی 2 بار در سال و همچنین سقف بالاتر برداشت وجه نقد و خرید روزانه.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>آیا امکان استفاده از این کارت در ایران وجود دارد؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>خیر، به دلیل تحریم‌ها، این کارت در ایران قابل استفاده نیست. اما در سایر کشورهای جهان (به جز عراق و چند کشور محدود دیگر) قابل استفاده است.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>چگونه می‌توانم حساب خود را شارژ کنم?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>از طریق صرافی‌های بین‌المللی، انتقال بانکی از سایر حساب‌های خارجی، و به زودی از طریق ارزهای دیجیتال نیز امکان شارژ حساب فراهم خواهد شد.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>آیا این سرویس قانونی است؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>بله، این سرویس کاملاً قانونی است و با هماهنگی کامل با بانک توسعه تاجیکستان ارائه می‌شود. مدارک صادر شده نیز کاملاً معتبر هستند.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تماس با ما</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <h4>تلگرام</h4>
+                    <a href="https://t.me/arianltd" class="contact-link" id="telegram-link">@arianltd</a>
+                    <p>پشتیبانی 24 ساعته</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>واتساپ</h4>
+                    <a href="https://wa.me/989122270234" class="contact-link" id="whatsapp-link">09122270234</a>
+                    <p>پاسخگویی در ساعات اداری</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>ایمیل</h4>
+                    <a href="mailto:info@arianltd.com" class="contact-link" id="email-link">info@arianltd.com</a>
+                    <p>پاسخ در کمتر از 24 ساعت</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>تلفن</h4>
+                    <a href="tel:+982122535250" class="contact-link" id="phone-link">021-22535250</a>
+                    <p>شنبه تا چهارشنبه 9 تا 17</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2 class="section-title">دانلود اطلاعات</h2>
+            <p>برای ذخیره اطلاعات این صفحه، می‌توانید فایل HTML کامل را دانلود کنید:</p>
+            <button id="download-html" class="btn">
+                <i class="fas fa-download"></i> دانلود فایل HTML
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 <span id="footer-company">شرکت خدمات مالی آریان</span>. تمام حقوق محفوظ است.</p>
+            <p>ارائه خدمات بانکی بین‌المللی برای ایرانیان</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navContainer = document.querySelector('.nav-container');
+        
+        menuToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('faq-active');
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Search Functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchResults = document.querySelector('.search-results');
+        
+        // Sample search data
+        const searchData = [
+            { title: 'ویزاکارت گلد', link: '#products' },
+            { title: 'ویزاکارت پلاتینیوم', link: '#products' },
+            { title: 'مقایسه با ترکیه', link: '#comparison' },
+            { title: 'شارژ حساب', link: '#details' },
+            { title: 'تماس با ما', link: '#contact' },
+            { title: 'سوالات متداول', link: '#faq' }
+        ];
+        
+        searchInput.addEventListener('input', () => {
+            const value = searchInput.value.toLowerCase();
+            searchResults.innerHTML = '';
+            
+            if (value.length > 2) {
+                const filteredResults = searchData.filter(item => 
+                    item.title.toLowerCase().includes(value)
+                );
+                
+                if (filteredResults.length > 0) {
+                    searchResults.classList.add('active');
+                    
+                    filteredResults.forEach(result => {
+                        const resultItem = document.createElement('div');
+                        resultItem.classList.add('search-result-item');
+                        resultItem.textContent = result.title;
+                        resultItem.addEventListener('click', () => {
+                            window.location.href = result.link;
+                            searchResults.classList.remove('active');
+                            searchInput.value = '';
+                        });
+                        searchResults.appendChild(resultItem);
+                    });
+                } else {
+                    const noResult = document.createElement('div');
+                    noResult.classList.add('search-result-item');
+                    noResult.textContent = 'نتیجه‌ای یافت نشد';
+                    searchResults.appendChild(noResult);
+                    searchResults.classList.add('active');
+                }
+            } else {
+                searchResults.classList.remove('active');
+            }
+        });
+        
+        // Close search results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.classList.remove('active');
+            }
+        });
+
+        // Download HTML functionality
+        document.getElementById('download-html').addEventListener('click', function() {
+            // Get the HTML content
+            const htmlContent = document.documentElement.outerHTML;
+            
+            // Create a blob from the HTML content
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            
+            // Create a download link
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'visacard-tajikistan.html';
+            
+            // Trigger the download
+            document.body.appendChild(a);
+            a.click();
+            
+            // Clean up
+            document.body.removeChild(a);
+            URL.revokeObjectURL(a.href);
+            
+            // Show confirmation message
+            alert('فایل HTML با موفقیت دانلود شد.');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Admin Panel Functionality
+        const adminPanel = document.querySelector('.admin-panel');
+        const adminForm = document.getElementById('admin-form');
+        const adminOverlay = document.getElementById('admin-overlay');
+        const closeAdminBtn = document.getElementById('close-admin');
+        const saveSettingsBtn = document.getElementById('save-settings');
+
+        adminPanel.addEventListener('click', () => {
+            adminForm.style.display = 'block';
+            adminOverlay.style.display = 'block';
+        });
+
+        closeAdminBtn.addEventListener('click', () => {
+            adminForm.style.display = 'none';
+            adminOverlay.style.display = 'none';
+        });
+
+        adminOverlay.addEventListener('click', () => {
+            adminForm.style.display = 'none';
+            adminOverlay.style.display = 'none';
+        });
+
+        saveSettingsBtn.addEventListener('click', () => {
+            // Get values from form
+            const companyName = document.getElementById('company-name').value;
+            const telegramLink = document.getElementById('telegram-link').value;
+            const telegramDisplay = document.getElementById('telegram-display').value;
+            const whatsappNumber = document.getElementById('whatsapp-number').value;
+            const emailAddress = document.getElementById('email-address').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+
+            // Update page content
+            document.getElementById('company-name-display').textContent = companyName;
+            document.getElementById('footer-company').textContent = companyName;
+            
+            document.getElementById('telegram-btn').href = telegramLink;
+            document.getElementById('telegram-btn2').href = telegramLink;
+            document.getElementById('telegram-link').href = telegramLink;
+            document.getElementById('telegram-link').textContent = telegramDisplay;
+            
+            document.getElementById('whatsapp-link').href = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}`;
+            document.getElementById('whatsapp-link').textContent = whatsappNumber;
+            
+            document.getElementById('email-link').href = `mailto:${emailAddress}`;
+            document.getElementById('email-link').textContent = emailAddress;
+            
+            document.getElementById('phone-link').href = `tel:${phoneNumber}`;
+            document.getElementById('phone-link').textContent = phoneNumber;
+
+            // Close form
+            adminForm.style.display = 'none';
+            adminOverlay.style.display = 'none';
+
+            // Show confirmation
+            alert('تغییرات با موفقیت ذخیره شدند.');
+        });
+    </script>
+</body>
+</html>
